@@ -1,20 +1,43 @@
+public class ContaBancaria {
+    private double saldo;
+    private String numeroDaConta;
 
-public class Ex3 {
+    public ContaBancaria(String numeroDaConta, double saldoInicial) {
+        this.numeroDaConta = numeroDaConta;
+        this.saldo = saldoInicial;
+    }
 
-	public static void main(String[] args) {
+    public void depositar(double valor) {
+        if (valor > 0) {
+            saldo += valor;
+            System.out.println("Depósito de " + valor + " realizado. Novo saldo: " + saldo);
+        } else {
+            System.out.println("Valor de depósito inválido.");
+        }
+    }
 
-		int [] array = new int[5];
-		
-		for(int x = 0; x < 5; x++) {
-			array[x] = x;
-		}
-		
-		for (int i = 0; i <= 5; i ++) {
-			try {
-				System.out.println("Número da posição " + i + " :" + array[i]);
-			} catch(ArrayIndexOutOfBoundsException e){
-				System.out.println("Chegou no limite do array.");
-			}
-		}
-	}
+    public void sacar(double valor) {
+        if (valor > 0 && valor <= saldo) {
+            saldo -= valor;
+            System.out.println("Saque de " + valor + " realizado. Novo saldo: " + saldo);
+        } else {
+            System.out.println("Saldo insuficiente ou valor de saque inválido.");
+        }
+    }
+
+    public double verificarSaldo() {
+        return saldo;
+    }
+
+    public static void main(String[] args) {
+        ContaBancaria conta = new ContaBancaria("12345", 1000.0);
+
+        System.out.println("Saldo inicial: " + conta.verificarSaldo());
+
+        conta.depositar(500.0);
+        conta.sacar(200.0);
+        conta.sacar(1500.0);
+
+        System.out.println("Saldo final: " + conta.verificarSaldo());
+    }
 }

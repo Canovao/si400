@@ -1,24 +1,36 @@
-import java.util.Scanner;
+public class Pessoa {
+    private String nome;
+    private int idade;
 
-public class Ex1 {
+    public void setNome(String novoNome) {
+        nome = novoNome;
+    }
 
-	public static void main(String[] args) {
-		
-		Scanner scanner = new Scanner(System.in);
-		
-		System.out.println("Digite o dividendo:");
-		double n1 = scanner.nextDouble();
-		
-		System.out.println("dividido por...:");
-		double n2 = scanner.nextDouble();
+    public String getNome() {
+        return nome;
+    }
 
-		scanner.close();
-		
-		try {
-			double div = n1/n2;
-            System.out.println("Resultado: " + div);
-        } catch (ArithmeticException e) {
-            System.out.println("Erro de divisão por zero!");
-		}
-	}
+    public void setIdade(int novaIdade) {
+        idade = novaIdade;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public Pessoa(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+    public static void main(String[] args) {
+        Pessoa pessoa = new Pessoa("João", 25);
+        System.out.println("Nome: " + pessoa.getNome());
+        System.out.println("Idade: " + pessoa.getIdade());
+
+        pessoa.setNome("Maria");
+        pessoa.setIdade(30);
+        System.out.println("Novo nome: " + pessoa.getNome());
+        System.out.println("Nova idade: " + pessoa.getIdade());
+    }
 }
