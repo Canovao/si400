@@ -3,7 +3,7 @@ package project;
 import java.io.*;
 import java.util.*;
 
-/**Classe para ler o arquivo passado e gerar o dígrafo, contendo como atributo o nome do arquivo e métodos necessários
+/**Classe para ler o arquivo passado e gerar o dígrafo, contendo os métodos necessários e como atributo o nome do arquivo
 * @author Nicolas Canova
 * @version 1.0
 * @since Primeira versão da aplicação
