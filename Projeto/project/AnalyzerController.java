@@ -14,14 +14,17 @@ public class AnalyzerController {
     
     private String[] fileNames;
 
-    /**Classe construtora chamando um vetor de strings com os nomes dos arquivos que serão processados
-    * @param fileNames String[] - 
+    /**Método construtor chamando um vetor de strings com os nomes dos arquivos que serão processados
+    * @param fileNames String[] - Nomes dos arquivos passados
     */
     
     public AnalyzerController(String[] fileNames) {
         this.fileNames = fileNames;
     }
 
+    /**Método para utilizar as classes AnalyzerReader e AnalyzerWriter, primeiro utilizando o reader para gerar o dígrafo e depois o writer para converte-lo para csv
+    */
+    
     public void processFiles() throws IOException {
         for (String fileName : fileNames) {
             AnalyzerReader reader = new AnalyzerReader(fileName);
