@@ -3,6 +3,12 @@ package project;
 import java.io.*;
 import java.util.*;
 
+/**Classe para converter o dígrafo passado para csv, contendo os métodos necessários e como atributos o nome do arquivo e dígrafo gerado
+* @author Nicolas Canova
+* @version 1.0
+* @since Primeira versão da aplicação
+*/
+
 public class AnalyzerWriter {
 
     private String fileName;
