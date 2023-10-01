@@ -32,8 +32,9 @@ public class AnalyzerReader {
                     }
                 }
             }
+        } catch (IOException e) {
+            System.err.println("Erro ao ler o arquivo " + fileName + ": " + e.getMessage());
         }
-
         return digraph;
     }
 }
