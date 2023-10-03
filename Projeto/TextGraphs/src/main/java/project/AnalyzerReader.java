@@ -53,7 +53,9 @@ public class AnalyzerReader {
             }
         } catch (IOException e) {
             System.err.println("Error reading the file [" + fileName + "]: " + e.getMessage());
+            throw new IOException(e.getMessage());
         }
+
         return digraph;
     }
 }

@@ -30,13 +30,13 @@ public class AnalyzerController {
     public void processFiles() throws IOException {
         for (String fileName : fileNames) {
             try {
-            AnalyzerReader reader = new AnalyzerReader(fileName);
+                AnalyzerReader reader = new AnalyzerReader(fileName);
 
-            TreeMap<String, ArrayList<String>> digraph = reader.generateDigraph();
+                TreeMap<String, ArrayList<String>> digraph = reader.generateDigraph();
 
-            AnalyzerWriter writer = new AnalyzerWriter(fileName, digraph);
+                AnalyzerWriter writer = new AnalyzerWriter(fileName, digraph);
 
-            writer.writeToCSV();
+                writer.writeToCSV();
             }catch (IOException e) {
                 System.err.println("Error processing the file [" + fileName + "]: " + e.getMessage());
             }
