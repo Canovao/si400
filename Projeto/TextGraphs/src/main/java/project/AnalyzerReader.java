@@ -4,8 +4,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 import java.util.TreeMap;
 
 /**C
@@ -30,10 +28,10 @@ public class AnalyzerReader {
 
     /**
      * Method for readless of the file and generation of the digraph
-     * @return Map<String, List<String>> - Generated digraph
+     * @return TreeMap<String, ArrayList<String>> - Tree map of generated digraph to be written into .csv file
      */
-    public Map<String, List<String>> generateDigraph() throws IOException {
-        Map<String, List<String>> digraph = new TreeMap<>();
+    public TreeMap<String, ArrayList<String>> generateDigraph() throws IOException {
+        TreeMap<String, ArrayList<String>> digraph = new TreeMap<>();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
             String line;
@@ -55,7 +53,9 @@ public class AnalyzerReader {
             }
         } catch (IOException e) {
             System.err.println("Error reading the file [" + fileName + "]: " + e.getMessage());
+            throw new IOException(e.getMessage());
         }
+
         return digraph;
     }
 }

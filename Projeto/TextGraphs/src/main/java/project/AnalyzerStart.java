@@ -14,6 +14,7 @@ public class AnalyzerStart {
     /**
      * Main method of the application, guides the users to the use of the application,
      * uses the controller for process the files and point to a message in the console in case of error
+     * @param args String[] Program arguments that are the .txt files to generate the .csv digraphs
      */
     public static void main(String[] args) {
         if (args.length == 0) {

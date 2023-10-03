@@ -3,8 +3,9 @@ package project;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.List;
+import java.util.ArrayList;
 import java.util.Map;
+import java.util.TreeMap;
 
 /**
  * Class for convert the digraph to csv,
@@ -17,15 +18,15 @@ import java.util.Map;
 public class AnalyzerWriter {
 
     private final String fileName;
-    private final Map<String, List<String>> digraph;
+    private final TreeMap<String, ArrayList<String>> digraph;
 
     /**
      * Constructor method of the class,
      * calling the name o the file and the generated digraph
      * @param fileName String - File name
-     * @param digraph Map<String, List<String>> - Generated digraph for AnalyzerReader class
+     * @param digraph TreeMap<String, ArrayList<String>> - Generated digraph for AnalyzerReader class
      */
-    public AnalyzerWriter(String fileName, Map<String, List<String>> digraph) {
+    public AnalyzerWriter(String fileName, TreeMap<String, ArrayList<String>> digraph) {
         this.fileName = fileName;
         this.digraph = digraph;
     }
@@ -38,10 +39,10 @@ public class AnalyzerWriter {
         String outputFileName = fileName.replace(".txt", ".csv");
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFileName))) {
-            for (Map.Entry<String, List<String>> entry : digraph.entrySet()) {
+            for (Map.Entry<String, ArrayList<String>> entry : digraph.entrySet()) {
                 String source = entry.getKey();
 
-                List<String> destinations = entry.getValue();
+                ArrayList<String> destinations = entry.getValue();
 
                 String line = source + ", " + String.join(", ", destinations);
 
