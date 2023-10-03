@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.TreeMap;
 
-/**C
+/**
  * Class to read the file inserted and generate the digraph,
  * containing the needed methods and the name of the files like an attribute
  * @author Nicolas Canova
