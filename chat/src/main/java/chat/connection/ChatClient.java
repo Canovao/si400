@@ -6,8 +6,8 @@ import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.util.Date;
 
-import dto.ChatDTO;
-import gui.ChatFrame;
+import chat.DTO.ChatDTO;
+import chat.GUI.ChatFrame;
 
 public class ChatClient {
     private static Socket socket;
