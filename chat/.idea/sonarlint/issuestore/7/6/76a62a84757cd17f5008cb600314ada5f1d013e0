@@ -1,0 +1,12 @@
+
+m
+java:S1450"RRemove the "out" field and declare it as a local variable in the relevant methods.(Şùıÿÿÿÿ
+P
+java:S1118":Add a private constructor to hide the implicit public one.(æ‡³
+E	java:S106"+Replace this use of System.out by a logger.(ËŸ‚·øÿÿÿÿ
+E	java:S106"+Replace this use of System.out by a logger.(÷â“êùÿÿÿÿ
+@	java:S106,"+Replace this use of System.err by a logger.(Ğå«©
+@	java:S1066"+Replace this use of System.out by a logger.(¸½Ş
+E	java:S1069"+Replace this use of System.err by a logger.(»ÒÎ‡ûÿÿÿÿ
+B
+java:S1068"'Remove this unused "out" private field.(Şùıÿÿÿÿ
