@@ -14,6 +14,8 @@ public class ChatClient {
     private static ObjectOutputStream out;
     private static final String SENDER = "Client";
 
+    private ChatClient(){}
+
     public static void start(String serverAddress, int port) {
         try {
             socket = new Socket(serverAddress, port);

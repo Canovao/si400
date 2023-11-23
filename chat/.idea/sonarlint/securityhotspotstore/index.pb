@@ -39,3 +39,5 @@ p
 @src/main/java/chat/connection/fileTransmission/FileReceiver.java,7\4\74fb0768f02a815acf79a6e6b83b373d74fbed6c
 n
 >src/main/java/chat/connection/fileTransmission/FileSender.java,e\5\e5f943363fe3463c0af69d2f9bce68e46fd03df0
+X
+(src/main/java/chat/GUI/GuiConstants.java,6\3\630cc5c0fc39e45b55ffd38abcde0fc2bf355027

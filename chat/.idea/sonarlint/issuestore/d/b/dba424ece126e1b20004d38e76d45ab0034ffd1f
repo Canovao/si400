@@ -1,5 +1,8 @@
 
->
-java:S1604("(Make this anonymous inner class a lambda(•ƒØ·
 v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÀÂ¤8òŠ–é¿1
-Q	java:S1255"<This block of commented-out lines of code should be removed.(æªº
+x
+java:S1450"VRemove the "ipField" field and declare it as a local variable in the relevant methods.(´£ÒÅÿÿÿÿÿ8Ì¢áì¿1
+u
+java:S1450"XRemove the "portField" field and declare it as a local variable in the relevant methods.(­Î8Ì¢áì¿1
+~
+java:S1450"\Remove the "usernameField" field and declare it as a local variable in the relevant methods.(°£´ßúÿÿÿÿ8ÎŠàì¿1

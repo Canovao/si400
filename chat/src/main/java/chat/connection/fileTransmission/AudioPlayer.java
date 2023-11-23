@@ -12,7 +12,10 @@ import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
 public class AudioPlayer {
-	public static void playAudio(String filePath) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+
+    private AudioPlayer(){}
+
+    public static void playAudio(String filePath) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         File audioFile = new File(filePath);
 
         AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);

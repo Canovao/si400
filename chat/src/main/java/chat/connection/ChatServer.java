@@ -16,6 +16,8 @@ public class ChatServer {
     private static ObjectOutputStream out;
     private static ObjectInputStream in;
 
+    private ChatServer(){}
+
     public static void start(int port) {
         try {
             serverSocket = new ServerSocket(port);

@@ -3,5 +3,3 @@ v	java:S120"ZRename this package name to match the regular expression '^[a-z_
 t	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¹Œ„ˆúÿÿÿÿ
 o	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(®ÚÚ
 o	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ó¿ÌŞ
-U
-java:S1118":Add a private constructor to hide the implicit public one.(˜íğ›øÿÿÿÿ

@@ -15,10 +15,12 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.File;
 import java.io.IOException;
+import java.io.Serial;
 import java.util.Date;
 
 public class ChatFrame extends JFrame implements ActionListener{
-	private static final long serialVersionUID = 1L;
+	@Serial
+    private static final long serialVersionUID = 1L;
 	private JPanel contentPanel;
 	private JTextArea conversationArea;
 	private JTextField textField;
@@ -31,7 +33,7 @@ public class ChatFrame extends JFrame implements ActionListener{
 	private static ChatFrame instance;
 
     public ChatFrame() {
-        super(GlobalConstants.getNameVersion());
+        super(GuiConstants.getNameVersion());
         instance = this;
         configureFrame();
         createAndAddMenuBar();
@@ -48,7 +50,7 @@ public class ChatFrame extends JFrame implements ActionListener{
     } 
     
     private void configureFrame() {
-        this.setTitle(GlobalConstants.name);
+        this.setTitle(GuiConstants.name);
         this.setSize(800, 600);
         this.setLocationRelativeTo(null);
         this.setBackground(Color.white);
@@ -115,7 +117,6 @@ public class ChatFrame extends JFrame implements ActionListener{
             dialog.setSize(300, 150);
             dialog.setLocationRelativeTo(ChatFrame.this);
             dialog.setVisible(true);
-            //(new ConnectionDialog(ChatFrame.this))
     	}
     	if(event.getSource() == aboutItem) {
     		(new AboutDialog(ChatFrame.this)).setVisible(true);
@@ -146,9 +147,9 @@ public class ChatFrame extends JFrame implements ActionListener{
     
     public void updateConnectionStatus(boolean connected) {
         if (connected) {
-            statusBar.setText("Connection Status: Connected");
+            statusBar.setText("Connection: Connected");
         } else {
-            statusBar.setText("Connection Status: Disconnected");
+            statusBar.setText("Connection: Disconnected");
         }
     }
     
@@ -326,7 +327,7 @@ public class ChatFrame extends JFrame implements ActionListener{
             }
         });
     	
-    	ImageIcon originalIcon = new ImageIcon("..\\Projeto III - Chat Online\\icon\\FileIcon.png");
+    	ImageIcon originalIcon = new ImageIcon("src/main/resources/img/FileIcon.png");
     	Image originalImage = originalIcon.getImage();
 
     	int newWidth = 24;
