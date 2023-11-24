@@ -5,6 +5,9 @@ import javax.swing.*;
 import chat.connection.ChatClient;
 import chat.connection.ChatServer;
 import chat.DTO.ChatDTO;
+import chat.GUI.dialog.AboutDialog;
+import chat.GUI.dialog.ConnectionDialog;
+import chat.GUI.dialog.HelpDialog;
 import chat.connection.fileTransmission.AudioPlayer;
 import chat.connection.fileTransmission.FileSender;
 
@@ -32,8 +35,16 @@ public class ChatFrame extends JFrame implements ActionListener{
 	private ChatDTO userInfo;
 	private static ChatFrame instance;
 
+    public static void setUserInfo(ChatDTO userInfo){
+        getInstance().userInfo = userInfo;
+    }
+
+    public static ChatDTO getUserInfo(){
+        return getInstance().userInfo;
+    } 
+
     public ChatFrame() {
-        super(GuiConstants.getNameVersion());
+        super(GuiConstants.NAME_VERSION);
         instance = this;
         configureFrame();
         createAndAddMenuBar();
@@ -50,7 +61,7 @@ public class ChatFrame extends JFrame implements ActionListener{
     } 
     
     private void configureFrame() {
-        this.setTitle(GuiConstants.name);
+        this.setTitle(GuiConstants.NAME);
         this.setSize(800, 600);
         this.setLocationRelativeTo(null);
         this.setBackground(Color.white);
@@ -153,25 +164,6 @@ public class ChatFrame extends JFrame implements ActionListener{
         }
     }
     
-    public void insertUsername() {
-        String username;
-
-        do {
-            username = JOptionPane.showInputDialog(ChatFrame.this, "Enter username: ");
-
-            if (username != null && !username.trim().isEmpty()) {
-                userInfo = new ChatDTO(username, "joined!", new Date());
-                addMessageToConversation(userInfo);
-            } else if (username != null) {
-                JOptionPane.showMessageDialog(ChatFrame.this, "Invalid username!", "Error", JOptionPane.WARNING_MESSAGE);
-            } else {
-            	ChatServer.disconnect();
-            	JOptionPane.showMessageDialog(ChatFrame.this, "You've been Disconnected.", "Connection", JOptionPane.INFORMATION_MESSAGE);
-                return;
-            }
-        } while (username.trim().isEmpty());
-    }
-    
     private void addContentPanel() {
     	contentPanel = new JPanel(new BorderLayout());
     	
@@ -225,7 +217,7 @@ public class ChatFrame extends JFrame implements ActionListener{
     
     public void sendFileMessage(File file) {
     	String message = textField.getText();
-    	ChatClient.sendFileMessage(message, file);
+    	ChatClient.sendFileMessage(new ChatDTO(message, message, new Date(), file));
     	addFileSentMessageToConversation(new ChatDTO("Eu", message, new Date(), file));
     	textField.setText("");
     }
@@ -260,10 +252,10 @@ public class ChatFrame extends JFrame implements ActionListener{
                 conversationArea.add(fileLabel);
             }
 
-            SwingUtilities.invokeLater(() -> conversationArea.append(receivedMessage.getMessageFile().getName() + "\n" + receivedMessage.getDateTimeOfMessage() + "\n\n"));
+            SwingUtilities.invokeLater(() -> conversationArea.append(receivedMessage.getMessageFile().getName() + receivedMessage.getDateTimeOfMessage() + "\n\n"));
         } else {
             String message = receivedMessage.getMessage();
-            SwingUtilities.invokeLater(() -> conversationArea.append(receivedMessage.getUsername() + ":\n" + formatMessage(message) + "\n" + receivedMessage.getDateTimeOfMessage() + "\n\n"));
+            SwingUtilities.invokeLater(() -> conversationArea.append(receivedMessage.getUsername() + ":" + receivedMessage.getDateTimeOfMessage() + "\n" + formatMessage(message) + "\n\n"));
         }
     }
 

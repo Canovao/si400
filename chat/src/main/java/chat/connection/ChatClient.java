@@ -1,6 +1,5 @@
 package chat.connection;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
@@ -12,7 +11,6 @@ import chat.GUI.ChatFrame;
 public class ChatClient {
     private static Socket socket;
     private static ObjectOutputStream out;
-    private static final String SENDER = "Client";
 
     private ChatClient(){}
 
@@ -25,17 +23,14 @@ public class ChatClient {
             ChatFrame.getInstance().updateConnectionStatus(getConnectionStatus());
             
             out = new ObjectOutputStream(socket.getOutputStream());
-
-            sendMessage("If you can see this message, connection has been successful.");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public static void sendMessage(String textContent) {
+    public static void sendMessage(String message) {
         try {
-            ChatDTO message = new ChatDTO(SENDER, textContent, new Date());
-            ChatFrame.getInstance().addMessageToConversation(message);
+            ChatFrame.getInstance().addMessageToConversation(new ChatDTO(ChatFrame.getUserInfo().getUsername(), message, new Date()));
             out.writeObject(message);
             out.flush();
         } catch (IOException e) {
@@ -43,9 +38,8 @@ public class ChatClient {
         }
     }
     
-    public static void sendFileMessage(String textContent, File file) {
+    public static void sendFileMessage(ChatDTO message) {
     	try {
-    		ChatDTO message = new ChatDTO(SENDER, textContent, new Date(), file);
     		ChatFrame.getInstance().addFileSentMessageToConversation(message);
             out.writeObject(message);
             out.flush();

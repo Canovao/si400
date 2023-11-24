@@ -1,8 +1,11 @@
-package chat.GUI;
+package chat.GUI.dialog;
 
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+
+import chat.GUI.GuiConstants;
+
 import java.awt.FlowLayout;
 
 public class AboutDialog extends JDialog {
@@ -18,7 +21,7 @@ public class AboutDialog extends JDialog {
 
     private void initializeUI() {
         setLayout(new FlowLayout());
-        JLabel label = new JLabel("<html>" + "Chat Application Version 1.4" + "<br>" + "<br>" +"Created by:" + "<br>" + "Julio Morino Anastácio | 173434" + "<br>" + "\nFelipe Akira Nozaki | 172885" + "<br>" + "\nMiguel Miranda Melo Donanzam | 260851" + "<br>" + "<br>" + "Last modified: November 22th, 2023" + "</html>");
+        JLabel label = new JLabel(GuiConstants.ABOUT_HTML);
         add(label);
         setSize(300, 200);
         setLocationRelativeTo(null);

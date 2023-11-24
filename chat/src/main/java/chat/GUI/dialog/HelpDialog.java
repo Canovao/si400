@@ -1,8 +1,11 @@
-package chat.GUI;
+package chat.GUI.dialog;
 
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+
+import chat.GUI.GuiConstants;
+
 import java.awt.FlowLayout;
 
 public class HelpDialog extends JDialog {
@@ -18,7 +21,7 @@ public class HelpDialog extends JDialog {
 
     private void initializeUI() {
         setLayout(new FlowLayout());
-        JLabel label = new JLabel("<html>" + "Welcome to Chat Application 1.4!" + "<br>" + "<br>" +"Want to start a chat? Go to:" + "<br>" + "File ➜ Connection"  + "</html>");
+        JLabel label = new JLabel(GuiConstants.HELP_HTML);
         add(label);
         setSize(300, 150);
         setLocationRelativeTo(null);

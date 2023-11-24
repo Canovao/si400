@@ -1,11 +1,14 @@
-package chat.GUI;
+package chat.GUI.dialog;
 
 import javax.swing.*;
 
+import chat.DTO.ChatDTO;
+import chat.GUI.ChatFrame;
 import chat.connection.ChatClient;
 import chat.connection.ChatServer;
 
 import java.awt.*;
+import java.util.Date;
 
 public class ConnectionDialog extends JDialog {
     /**
@@ -38,15 +41,29 @@ public class ConnectionDialog extends JDialog {
         panel.add(usernameLabel);
         panel.add(usernameField);
 
+        
         JButton connectButton = new JButton("Connect");
         connectButton.addActionListener(e -> {
             String ipAddress = ipField.getText();
             int port = Integer.parseInt(portField.getText());
 
+            String username = usernameField.getText();
+
+            if (username != null && !username.trim().isEmpty()) {
+                ChatDTO userInfo = new ChatDTO(username, "joined!", new Date());
+                ChatFrame.setUserInfo(userInfo);
+                ChatFrame.getInstance().addMessageToConversation(userInfo);
+            } else if (username != null) {
+                JOptionPane.showMessageDialog(this.getParent(), "Invalid username!", "Error", JOptionPane.WARNING_MESSAGE);
+            } else {
+            	ChatServer.disconnect();
+                return;
+            }
+
+
             new Thread(() -> ChatServer.start(port)).start();
             new Thread(() -> ChatClient.start(ipAddress, port)).start();
 
-            ((ChatFrame) getParent()).insertUsername();
             ((ChatFrame) getParent()).updateConnectionStatus(true);
             JOptionPane.showMessageDialog(ConnectionDialog.this, "Connection successfully established!", "Connection", JOptionPane.INFORMATION_MESSAGE);
             dispose();
