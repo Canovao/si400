@@ -11,9 +11,6 @@ import java.awt.*;
 import java.util.Date;
 
 public class ConnectionDialog extends JDialog {
-    /**
-	 * 
-	 */
 	private static final long serialVersionUID = 992994705610187333L;
 	private JTextField ipField;
 	private JTextField portField;

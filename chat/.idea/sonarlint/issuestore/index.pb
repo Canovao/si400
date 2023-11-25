@@ -5,8 +5,6 @@ S
 #src/main/java/chat/gui/ChatApp.java,1\9\19e805a4f0977e919112c272f667bd5acc0e33b8
 V
 &src/main/java/chat/gui/HelpDialog.java,7\2\72384ca021626894e2c00cf102b7b1b2627f1d83
-[
-+src/main/java/chat/gui/GlobalConstants.java,4\e\4e447a92510bcf10bb585481a7d9efaf0300178d
 \
 ,src/main/java/chat/gui/ConnectionDialog.java,b\0\b04f68752d0a8f8b76c3b27d7eb68bff43bf75c0
 U
@@ -25,8 +23,6 @@ S
 #src/main/java/chat/GUI/ChatApp.java,a\b\ab9e64c727b3e3135e9b5680853f97776a9f4bd3
 W
 'src/main/java/chat/GUI/AboutDialog.java,e\8\e89118255e01cfb71e22ea95d0f71a6597a2f918
-[
-+src/main/java/chat/GUI/GlobalConstants.java,c\8\c83cb15ad6ce83158000494788cf081532cd0424
 V
 &src/main/java/chat/GUI/HelpDialog.java,5\0\50514e805c3c0546a886a6fb379e073c2c21e396
 U
@@ -41,3 +37,11 @@ n
 >src/main/java/chat/connection/fileTransmission/FileSender.java,e\5\e5f943363fe3463c0af69d2f9bce68e46fd03df0
 X
 (src/main/java/chat/GUI/GuiConstants.java,6\3\630cc5c0fc39e45b55ffd38abcde0fc2bf355027
+^
+.src/main/java/chat/GUI/dialog/AboutDialog.java,1\5\15a3ead25fa9b332ddb59a25714fff367e829e2f
+O
+src/main/java/chat/GUI/App.java,d\0\d06b05a708ca2cdde536c097f5a27d577d5d28ce
+c
+3src/main/java/chat/GUI/dialog/ConnectionDialog.java,1\3\137f2f99a36c46de55a52386e24d77aa72909c32
+]
+-src/main/java/chat/GUI/dialog/HelpDialog.java,e\a\ea12b34cb2add7abbe759592c09ad9d394a2efce

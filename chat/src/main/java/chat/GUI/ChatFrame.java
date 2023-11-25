@@ -80,9 +80,9 @@ public class ChatFrame extends JFrame implements ActionListener{
 
         fileMenu = new JMenu("File");
         fileMenu.setMnemonic('F');
-        connectItem = new JMenuItem("Connection");
+        connectItem = new JMenuItem("Add Connection");
         connectItem.setMnemonic('C');
-        exitItem = new JMenuItem("Exit program");
+        exitItem = new JMenuItem("Exit " + GuiConstants.NAME);
         exitItem.setMnemonic('E');
 
         helpMenu = new JMenu("Help");
@@ -264,7 +264,13 @@ public class ChatFrame extends JFrame implements ActionListener{
         addMessageToConversation(receivedFileMessage);
         textField.setText("");
     }
-    
+
+    public static ImageIcon getImage(String path, int size){
+        ImageIcon originalIcon = new ImageIcon(path);
+        Image originalImage = originalIcon.getImage();
+        return new ImageIcon(originalImage.getScaledInstance(size, size, Image.SCALE_SMOOTH));
+    }
+
     private void addMessageInput() {
     	JPanel panel = new JPanel(new BorderLayout());
     	
@@ -318,17 +324,8 @@ public class ChatFrame extends JFrame implements ActionListener{
                 JOptionPane.showMessageDialog(ChatFrame.this, "You're not connected.", "Connection", JOptionPane.WARNING_MESSAGE);
             }
         });
-    	
-    	ImageIcon originalIcon = new ImageIcon("src/main/resources/img/FileIcon.png");
-    	Image originalImage = originalIcon.getImage();
 
-    	int newWidth = 24;
-    	int newHeight = 24;
-    	Image scaledImage = originalImage.getScaledInstance(newWidth, newHeight, Image.SCALE_SMOOTH);
-
-    	ImageIcon scaledIcon = new ImageIcon(scaledImage);
-
-    	fileButton.setIcon(scaledIcon);
+    	fileButton.setIcon(getImage("src/main/resources/img/files.png", 24));
     	messageInputPanel.add(fileButton, BorderLayout.WEST);
     	
     	panel.add(spaceTop, BorderLayout.NORTH);

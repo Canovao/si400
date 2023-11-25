@@ -6,9 +6,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ChatDTO implements Serializable{
-    /**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	public final String username;
     public final String message;

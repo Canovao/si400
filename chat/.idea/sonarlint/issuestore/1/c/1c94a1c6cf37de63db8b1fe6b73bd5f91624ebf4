@@ -1,28 +1,28 @@
 
-a
-java:S1192H"KDefine a constant instead of duplicating this literal "Connection" 5 times.(‚ïã
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÀÂ¤8û‰–é¿1
-G
-java:S2387","menuBar" is the name of a field in "Frame".(ëùĞ³ûÿÿÿÿ
-;
-java:S1659"&Declare "helpMenu" on a separate line.(‘èËz
-[
-java:S1659"EDeclare "exitItem" and all following declarations on a separate line.( ¥µ
-l
-java:S1450"WRemove the "fileMenu" field and declare it as a local variable in the relevant methods.(‘èËz
-l
-java:S1450"WRemove the "helpMenu" field and declare it as a local variable in the relevant methods.(‘èËz
-q
-java:S1450"VRemove the "menuBar" field and declare it as a local variable in the relevant methods.(ëùĞ³ûÿÿÿÿ
-t
-java:S1450"YRemove the "sendButton" field and declare it as a local variable in the relevant methods.(¾ö¨ûÿÿÿÿ
-@
-java:S3010%"%Remove this assignment of "instance".(ñõîÙşÿÿÿÿ
-e
-java:S3252:"OUse static access with "javax.swing.WindowConstants" for "DO_NOTHING_ON_CLOSE".(’¡¿
-_
-java:S6201d"DReplace this instanceof check and cast with 'instanceof JMenu jmenu'(®¸Ÿ¶üÿÿÿÿ
+i
+java:S1192«"KDefine a constant instead of duplicating this literal "Connection" 3 times.(€¹¥8–•·À1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÀÂ¤8“–•·À1
+N
+java:S2387","menuBar" is the name of a field in "Frame".(ëùĞ³ûÿÿÿÿ8É–•·À1
+B
+java:S1659 "&Declare "helpMenu" on a separate line.(‘èËz8Ê–•·À1
 b
-java:S6201l"LReplace this instanceof check and cast with 'instanceof JMenuItem jmenuitem'(€´Æ
-n
-java:S3776”"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(Şì¤×ÿÿÿÿÿ
+java:S1659!"EDeclare "exitItem" and all following declarations on a separate line.( ¥µ8Ê–•·À1
+s
+java:S1450 "WRemove the "fileMenu" field and declare it as a local variable in the relevant methods.(‘èËz8Ë–•·À1
+s
+java:S1450 "WRemove the "helpMenu" field and declare it as a local variable in the relevant methods.(‘èËz8Ë–•·À1
+x
+java:S1450"VRemove the "menuBar" field and declare it as a local variable in the relevant methods.(ëùĞ³ûÿÿÿÿ8Ë–•·À1
+{
+java:S1450"YRemove the "sendButton" field and declare it as a local variable in the relevant methods.(¾ö¨ûÿÿÿÿ8Ë–•·À1
+G
+java:S30100"%Remove this assignment of "instance".(ñõîÙşÿÿÿÿ8Ï–•·À1
+l
+java:S3252E"OUse static access with "javax.swing.WindowConstants" for "DO_NOTHING_ON_CLOSE".(’¡¿8Ñ–•·À1
+f
+java:S6201o"DReplace this instanceof check and cast with 'instanceof JMenu jmenu'(®¸Ÿ¶üÿÿÿÿ8Õ–•·À1
+i
+java:S6201w"LReplace this instanceof check and cast with 'instanceof JMenuItem jmenuitem'(€´Æ8Ö–•·À1
+u
+java:S3776’"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(Şì¤×ÿÿÿÿÿ8æ–•·À1

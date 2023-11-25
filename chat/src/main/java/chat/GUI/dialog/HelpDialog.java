@@ -9,9 +9,6 @@ import chat.GUI.GuiConstants;
 import java.awt.FlowLayout;
 
 public class HelpDialog extends JDialog {
-    /**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	public HelpDialog(JFrame parent) {
