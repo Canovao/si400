@@ -4,7 +4,7 @@ import javax.swing.*;
 
 import chat.connection.ChatClient;
 import chat.connection.ChatServer;
-import chat.DTO.ChatDTO;
+import chat.DTO.MessageDTO;
 import chat.GUI.dialog.AboutDialog;
 import chat.GUI.dialog.ConnectionDialog;
 import chat.GUI.dialog.HelpDialog;
@@ -21,7 +21,7 @@ import java.io.IOException;
 import java.io.Serial;
 import java.util.Date;
 
-public class ChatFrame extends JFrame implements ActionListener{
+public class Frame extends JFrame implements ActionListener{
 	@Serial
     private static final long serialVersionUID = 1L;
 	private JPanel contentPanel;
@@ -32,19 +32,19 @@ public class ChatFrame extends JFrame implements ActionListener{
 	private JMenu fileMenu, helpMenu;
 	private JMenuItem connectItem, exitItem, helpItem, aboutItem;
 	private JLabel statusBar;
-	private ChatDTO userInfo;
-	private static ChatFrame instance;
+	private MessageDTO userInfo;
+	private static Frame instance;
 
-    public static void setUserInfo(ChatDTO userInfo){
+    public static void setUserInfo(MessageDTO userInfo){
         getInstance().userInfo = userInfo;
     }
 
-    public static ChatDTO getUserInfo(){
+    public static MessageDTO getUserInfo(){
         return getInstance().userInfo;
     } 
 
-    public ChatFrame() {
-        super(GuiConstants.NAME_VERSION);
+    public Frame() {
+        super(Constants.NAME_VERSION);
         instance = this;
         configureFrame();
         createAndAddMenuBar();
@@ -52,7 +52,7 @@ public class ChatFrame extends JFrame implements ActionListener{
         addComponents();
     }
     
-    public static ChatFrame getInstance() {
+    public static Frame getInstance() {
     	return instance;
     }
     
@@ -61,7 +61,7 @@ public class ChatFrame extends JFrame implements ActionListener{
     } 
     
     private void configureFrame() {
-        this.setTitle(GuiConstants.NAME);
+        this.setTitle(Constants.NAME);
         this.setSize(800, 600);
         this.setLocationRelativeTo(null);
         this.setBackground(Color.white);
@@ -82,7 +82,7 @@ public class ChatFrame extends JFrame implements ActionListener{
         fileMenu.setMnemonic('F');
         connectItem = new JMenuItem("Add Connection");
         connectItem.setMnemonic('C');
-        exitItem = new JMenuItem("Exit " + GuiConstants.NAME);
+        exitItem = new JMenuItem("Exit " + Constants.NAME);
         exitItem.setMnemonic('E');
 
         helpMenu = new JMenu("Help");
@@ -124,16 +124,16 @@ public class ChatFrame extends JFrame implements ActionListener{
     
     public void actionPerformed(ActionEvent event) {
     	if(event.getSource() == connectItem) {
-    		ConnectionDialog dialog = new ConnectionDialog(ChatFrame.this);
+    		ConnectionDialog dialog = new ConnectionDialog(Frame.this);
             dialog.setSize(300, 150);
-            dialog.setLocationRelativeTo(ChatFrame.this);
+            dialog.setLocationRelativeTo(Frame.this);
             dialog.setVisible(true);
     	}
     	if(event.getSource() == aboutItem) {
-    		(new AboutDialog(ChatFrame.this)).setVisible(true);
+    		(new AboutDialog(Frame.this)).setVisible(true);
     	}
     	if(event.getSource() == helpItem) {
-    		(new HelpDialog(ChatFrame.this)).setVisible(true);
+    		(new HelpDialog(Frame.this)).setVisible(true);
     	}
         if(event.getSource() == exitItem) {
             ChatServer.disconnect();
@@ -211,18 +211,18 @@ public class ChatFrame extends JFrame implements ActionListener{
     public void sendMessage() {
     	String message = textField.getText();
     	ChatClient.sendMessage(message);
-        addMessageToConversation(new ChatDTO("Eu", message, new Date()));
+        addMessageToConversation(new MessageDTO("Eu", message, new Date()));
         textField.setText("");
     }
     
     public void sendFileMessage(File file) {
     	String message = textField.getText();
-    	ChatClient.sendFileMessage(new ChatDTO(message, message, new Date(), file));
-    	addFileSentMessageToConversation(new ChatDTO("Eu", message, new Date(), file));
+    	ChatClient.sendFileMessage(new MessageDTO(message, message, new Date(), file));
+    	addFileSentMessageToConversation(new MessageDTO("Eu", message, new Date(), file));
     	textField.setText("");
     }
     
-    public void addMessageToConversation(ChatDTO receivedMessage) {
+    public void addMessageToConversation(MessageDTO receivedMessage) {
         if (receivedMessage.getMessageFile() != null) {
             String fileName = receivedMessage.getMessageFile().getName();
             String extension = fileName.substring(fileName.lastIndexOf(".") + 1);
@@ -260,7 +260,7 @@ public class ChatFrame extends JFrame implements ActionListener{
     }
 
     
-    public void addFileSentMessageToConversation(ChatDTO receivedFileMessage) {
+    public void addFileSentMessageToConversation(MessageDTO receivedFileMessage) {
         addMessageToConversation(receivedFileMessage);
         textField.setText("");
     }
@@ -296,10 +296,10 @@ public class ChatFrame extends JFrame implements ActionListener{
     			if(!textField.getText().isEmpty() || !textField.getText().isBlank()) {
     				sendMessage();
     			} else {
-    				JOptionPane.showMessageDialog(ChatFrame.this, "Please enter a message before sending.", "Connection", JOptionPane.WARNING_MESSAGE);
+    				JOptionPane.showMessageDialog(Frame.this, "Please enter a message before sending.", "Connection", JOptionPane.WARNING_MESSAGE);
     			}
     		} else {
-    			JOptionPane.showMessageDialog(ChatFrame.this, "You're not connected.", "Connection", JOptionPane.WARNING_MESSAGE);
+    			JOptionPane.showMessageDialog(Frame.this, "You're not connected.", "Connection", JOptionPane.WARNING_MESSAGE);
     		}
     	});
     	
@@ -307,7 +307,7 @@ public class ChatFrame extends JFrame implements ActionListener{
     	fileButton.addActionListener(e -> {
             if(userInfo != null) {
                 JFileChooser fileChooser = new JFileChooser();
-                int option = fileChooser.showOpenDialog(ChatFrame.this);
+                int option = fileChooser.showOpenDialog(Frame.this);
                 if (option == JFileChooser.APPROVE_OPTION) {
                     File selectedFile = fileChooser.getSelectedFile();
 
@@ -321,7 +321,7 @@ public class ChatFrame extends JFrame implements ActionListener{
                     }
                 }
             } else {
-                JOptionPane.showMessageDialog(ChatFrame.this, "You're not connected.", "Connection", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(Frame.this, "You're not connected.", "Connection", JOptionPane.WARNING_MESSAGE);
             }
         });
 

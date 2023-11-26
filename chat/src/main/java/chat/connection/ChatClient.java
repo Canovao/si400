@@ -5,8 +5,8 @@ import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.util.Date;
 
-import chat.DTO.ChatDTO;
-import chat.GUI.ChatFrame;
+import chat.DTO.MessageDTO;
+import chat.GUI.Frame;
 
 public class ChatClient {
     private static Socket socket;
@@ -20,7 +20,7 @@ public class ChatClient {
 
             System.out.println("Connection established.");
             
-            ChatFrame.getInstance().updateConnectionStatus(getConnectionStatus());
+            Frame.getInstance().updateConnectionStatus(getConnectionStatus());
             
             out = new ObjectOutputStream(socket.getOutputStream());
         } catch (IOException e) {
@@ -30,7 +30,7 @@ public class ChatClient {
 
     public static void sendMessage(String message) {
         try {
-            ChatFrame.getInstance().addMessageToConversation(new ChatDTO(ChatFrame.getUserInfo().getUsername(), message, new Date()));
+            Frame.getInstance().addMessageToConversation(new MessageDTO(Frame.getUserInfo().getUsername(), message, new Date()));
             out.writeObject(message);
             out.flush();
         } catch (IOException e) {
@@ -38,9 +38,9 @@ public class ChatClient {
         }
     }
     
-    public static void sendFileMessage(ChatDTO message) {
+    public static void sendFileMessage(MessageDTO message) {
     	try {
-    		ChatFrame.getInstance().addFileSentMessageToConversation(message);
+    		Frame.getInstance().addFileSentMessageToConversation(message);
             out.writeObject(message);
             out.flush();
     	} catch(IOException e) {

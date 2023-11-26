@@ -5,14 +5,14 @@ import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class ChatDTO implements Serializable{
+public class MessageDTO implements Serializable{
 	private static final long serialVersionUID = 1L;
 	public final String username;
     public final String message;
     public final String dateTimeOfMessage;
     public File file;
 
-    public ChatDTO(String username, String message, Date dateTimeOfMessage){
+    public MessageDTO(String username, String message, Date dateTimeOfMessage){
         this.username = username;
         this.message = message;
         SimpleDateFormat ft = new SimpleDateFormat ("E hh:mm a");
@@ -20,7 +20,7 @@ public class ChatDTO implements Serializable{
         this.file = null;
     }
     
-    public ChatDTO(String username, String message, Date dateTimeOfMessage, File file){
+    public MessageDTO(String username, String message, Date dateTimeOfMessage, File file){
         this.username = username;
         this.message = message;
         SimpleDateFormat ft = new SimpleDateFormat ("E hh:mm a");

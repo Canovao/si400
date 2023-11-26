@@ -6,8 +6,8 @@ import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-import chat.DTO.ChatDTO;
-import chat.GUI.ChatFrame;
+import chat.DTO.MessageDTO;
+import chat.GUI.Frame;
 
 public class ChatServer {
 	
@@ -32,15 +32,15 @@ public class ChatServer {
                     in = new ObjectInputStream(clientSocket.getInputStream());
 
                     while (true) {
-                        ChatDTO receivedMessage = (ChatDTO) in.readObject();
-                        ChatFrame.getInstance().addMessageToConversation(receivedMessage);
+                        MessageDTO receivedMessage = (MessageDTO) in.readObject();
+                        Frame.getInstance().addMessageToConversation(receivedMessage);
                     }
                 } catch (IOException | ClassNotFoundException e) {
                     e.printStackTrace();
                 }
             });
             
-            ChatFrame.getInstance().updateConnectionStatus(getConnectionStatus());
+            Frame.getInstance().updateConnectionStatus(getConnectionStatus());
         } catch (IOException e) {
             System.err.println("Failed to connect to server: " + e.getMessage());
         }
@@ -51,7 +51,7 @@ public class ChatServer {
             if (serverSocket != null && !serverSocket.isClosed() && clientSocket != null && !clientSocket.isClosed()) {
             	clientSocket.close();
                 serverSocket.close();
-                ChatFrame.getInstance().updateConnectionStatus(getConnectionStatus());
+                Frame.getInstance().updateConnectionStatus(getConnectionStatus());
                 System.out.println("Connection ended.");
             }
         } catch (IOException e) {

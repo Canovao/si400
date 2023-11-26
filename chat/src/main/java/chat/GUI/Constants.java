@@ -1,6 +1,6 @@
 package chat.GUI;
 
-public class GuiConstants {
+public class Constants {
 	public static final String NICOLAS = "Nícolas Canova Berton de Almeida | RA: 260857";
 	public static final String THIAGO = "Thiago Luiz Garcia Gregio | RA: 257615";
 	public static final String PAULO = "Paulo Henrique De Souza Pantaleão | RA: 248437";
@@ -12,5 +12,5 @@ public class GuiConstants {
 	public static final String ABOUT_TEXT = NAME_VERSION + " Created by: ";
 	public static final String HELP_HTML = "<html>" + NAME + "<br> <br> To start a chat go to: <br> File -> Add Connection </html>";
 
-	private GuiConstants(){}
+	private Constants(){}
 }

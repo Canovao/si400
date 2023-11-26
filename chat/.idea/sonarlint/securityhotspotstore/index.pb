@@ -3,14 +3,8 @@
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 S
 #src/main/java/chat/gui/ChatApp.java,1\9\19e805a4f0977e919112c272f667bd5acc0e33b8
-V
-&src/main/java/chat/gui/HelpDialog.java,7\2\72384ca021626894e2c00cf102b7b1b2627f1d83
-\
-,src/main/java/chat/gui/ConnectionDialog.java,b\0\b04f68752d0a8f8b76c3b27d7eb68bff43bf75c0
 U
 %src/main/java/chat/gui/ChatFrame.java,e\9\e961dd8ecfc9e63c49ce7db0afc5749708583ac4
-W
-'src/main/java/chat/gui/AboutDialog.java,7\1\71e729929b39aef38a5e3e81fa1abf9eb15ca61e
 S
 #src/main/java/chat/dto/ChatDTO.java,5\f\5f9981f3d9f595273c88325310b3b5a290bd06b7
 ]
@@ -21,14 +15,8 @@ S
 #src/main/java/chat/DTO/ChatDTO.java,f\e\fe980689a8b1cd965bf6f7787b740f7c9788d000
 S
 #src/main/java/chat/GUI/ChatApp.java,a\b\ab9e64c727b3e3135e9b5680853f97776a9f4bd3
-W
-'src/main/java/chat/GUI/AboutDialog.java,e\8\e89118255e01cfb71e22ea95d0f71a6597a2f918
-V
-&src/main/java/chat/GUI/HelpDialog.java,5\0\50514e805c3c0546a886a6fb379e073c2c21e396
 U
 %src/main/java/chat/GUI/ChatFrame.java,1\c\1c94a1c6cf37de63db8b1fe6b73bd5f91624ebf4
-\
-,src/main/java/chat/GUI/ConnectionDialog.java,d\b\dba424ece126e1b20004d38e76d45ab0034ffd1f
 o
 ?src/main/java/chat/connection/fileTransmission/AudioPlayer.java,e\0\e0de46a0ca63f1fc25ac2da15289a4097ae5bb03
 p
@@ -39,9 +27,11 @@ X
 (src/main/java/chat/GUI/GuiConstants.java,6\3\630cc5c0fc39e45b55ffd38abcde0fc2bf355027
 ^
 .src/main/java/chat/GUI/dialog/AboutDialog.java,1\5\15a3ead25fa9b332ddb59a25714fff367e829e2f
-O
-src/main/java/chat/GUI/App.java,d\0\d06b05a708ca2cdde536c097f5a27d577d5d28ce
 c
 3src/main/java/chat/GUI/dialog/ConnectionDialog.java,1\3\137f2f99a36c46de55a52386e24d77aa72909c32
 ]
 -src/main/java/chat/GUI/dialog/HelpDialog.java,e\a\ea12b34cb2add7abbe759592c09ad9d394a2efce
+O
+src/main/java/chat/GUI/App.java,d\0\d06b05a708ca2cdde536c097f5a27d577d5d28ce
+Q
+!src/main/java/chat/GUI/Frame.java,3\2\32fdebcbc60cf3b72d020983acd67603c6778e0a

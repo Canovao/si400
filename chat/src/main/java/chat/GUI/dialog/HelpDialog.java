@@ -4,7 +4,7 @@ import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-import chat.GUI.GuiConstants;
+import chat.GUI.Constants;
 
 import java.awt.FlowLayout;
 
@@ -18,7 +18,7 @@ public class HelpDialog extends JDialog {
 
     private void initializeUI() {
         setLayout(new FlowLayout());
-        JLabel label = new JLabel(GuiConstants.HELP_HTML);
+        JLabel label = new JLabel(Constants.HELP_HTML);
         add(label);
         setSize(300, 150);
         setLocationRelativeTo(null);

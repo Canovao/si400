@@ -2,11 +2,11 @@ package chat.GUI;
 
 import javax.swing.SwingUtilities;
 
-public class ChatApp {
+public class App {
     public static void main(String[] args) {
     	SwingUtilities.invokeLater(() -> {
         	try {
-        		ChatFrame frame = new ChatFrame();
+        		Frame frame = new Frame();
         		frame.start();
         	
         	} catch (Exception e) {

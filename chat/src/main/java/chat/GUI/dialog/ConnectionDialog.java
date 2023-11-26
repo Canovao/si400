@@ -2,8 +2,8 @@ package chat.GUI.dialog;
 
 import javax.swing.*;
 
-import chat.DTO.ChatDTO;
-import chat.GUI.ChatFrame;
+import chat.DTO.MessageDTO;
+import chat.GUI.Frame;
 import chat.connection.ChatClient;
 import chat.connection.ChatServer;
 
@@ -16,7 +16,7 @@ public class ConnectionDialog extends JDialog {
 	private JTextField portField;
     private JTextField usernameField;
 
-    public ConnectionDialog(Frame parent) {
+    public ConnectionDialog(java.awt.Frame parent) {
         super(parent, "Connection", true);
         initializeUI();
     }
@@ -47,9 +47,9 @@ public class ConnectionDialog extends JDialog {
             String username = usernameField.getText();
 
             if (username != null && !username.trim().isEmpty()) {
-                ChatDTO userInfo = new ChatDTO(username, "joined!", new Date());
-                ChatFrame.setUserInfo(userInfo);
-                ChatFrame.getInstance().addMessageToConversation(userInfo);
+                MessageDTO userInfo = new MessageDTO(username, "joined!", new Date());
+                Frame.setUserInfo(userInfo);
+                Frame.getInstance().addMessageToConversation(userInfo);
             } else if (username != null) {
                 JOptionPane.showMessageDialog(this.getParent(), "Invalid username!", "Error", JOptionPane.WARNING_MESSAGE);
             } else {
@@ -61,7 +61,7 @@ public class ConnectionDialog extends JDialog {
             new Thread(() -> ChatServer.start(port)).start();
             new Thread(() -> ChatClient.start(ipAddress, port)).start();
 
-            ((ChatFrame) getParent()).updateConnectionStatus(true);
+            ((Frame) getParent()).updateConnectionStatus(true);
             JOptionPane.showMessageDialog(ConnectionDialog.this, "Connection successfully established!", "Connection", JOptionPane.INFORMATION_MESSAGE);
             dispose();
         });

@@ -4,8 +4,8 @@ import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-import chat.GUI.ChatFrame;
-import chat.GUI.GuiConstants;
+import chat.GUI.Frame;
+import chat.GUI.Constants;
 
 import java.awt.*;
 
@@ -20,18 +20,18 @@ public class AboutDialog extends JDialog {
     private void initializeUI() {
         setLayout(new GridLayout(6, 1));
 
-        JLabel nicolas = new JLabel(GuiConstants.NICOLAS);
-        nicolas.setIcon(ChatFrame.getImage("src/main/resources/img/nicolas.jpg", 64));
-        JLabel thiago = new JLabel(GuiConstants.THIAGO);
-        thiago.setIcon(ChatFrame.getImage("src/main/resources/img/thiago.png", 64));
-        JLabel eduardo = new JLabel(GuiConstants.EDUARDO);
-        eduardo.setIcon(ChatFrame.getImage("src/main/resources/img/eduardo.png", 64));
-        JLabel paulo = new JLabel(GuiConstants.PAULO);
-        paulo.setIcon(ChatFrame.getImage("src/main/resources/img/paulo.png", 64));
-        JLabel daniel = new JLabel(GuiConstants.DANIEL);
-        daniel.setIcon(ChatFrame.getImage("src/main/resources/img/daniel.png", 64));
+        JLabel nicolas = new JLabel(Constants.NICOLAS);
+        nicolas.setIcon(Frame.getImage("src/main/resources/img/nicolas.jpg", 64));
+        JLabel thiago = new JLabel(Constants.THIAGO);
+        thiago.setIcon(Frame.getImage("src/main/resources/img/thiago.png", 64));
+        JLabel eduardo = new JLabel(Constants.EDUARDO);
+        eduardo.setIcon(Frame.getImage("src/main/resources/img/eduardo.png", 64));
+        JLabel paulo = new JLabel(Constants.PAULO);
+        paulo.setIcon(Frame.getImage("src/main/resources/img/paulo.png", 64));
+        JLabel daniel = new JLabel(Constants.DANIEL);
+        daniel.setIcon(Frame.getImage("src/main/resources/img/daniel.png", 64));
 
-        JLabel aboutText = new JLabel(GuiConstants.ABOUT_TEXT);
+        JLabel aboutText = new JLabel(Constants.ABOUT_TEXT);
         add(aboutText);
         add(nicolas);
         add(thiago);
