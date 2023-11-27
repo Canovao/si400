@@ -1,10 +1,16 @@
 
-m
-java:S1450"RRemove the "out" field and declare it as a local variable in the relevant methods.(Şùıÿÿÿÿ
-E	java:S106"+Replace this use of System.out by a logger.(ËŸ‚·øÿÿÿÿ
-E	java:S106"+Replace this use of System.out by a logger.(÷â“êùÿÿÿÿ
-@	java:S106-"+Replace this use of System.err by a logger.(Ğå«©
-@	java:S1067"+Replace this use of System.out by a logger.(¸½Ş
-E	java:S106:"+Replace this use of System.err by a logger.(»ÒÎ‡ûÿÿÿÿ
+F
+java:S3010")Remove this assignment of "serverSocket".(ÂÀª8†‡¼„Á1
+F
+java:S3010")Remove this assignment of "clientSocket".(ÍÁ¥Å8†‡¼„Á1
+<
+java:S3010" Remove this assignment of "out".(¹‡­>8‡‡¼„Á1
+<
+java:S3010"Remove this assignment of "in".(ªíö¢8‡‡¼„Á1
+E	java:S106"+Replace this use of System.out by a logger.(ËŸ‚·øÿÿÿÿ
+L	java:S106"+Replace this use of System.out by a logger.(÷â“êùÿÿÿÿ8Š‡¼„Á1
+@	java:S106,"+Replace this use of System.err by a logger.(Ğå«©
+G	java:S1066"+Replace this use of System.out by a logger.(¸½Ş8‡¼„Á1
+L	java:S1069"+Replace this use of System.err by a logger.(»ÒÎ‡ûÿÿÿÿ8‡¼„Á1
 B
-java:S1068"'Remove this unused "out" private field.(Şùıÿÿÿÿ
+java:S1068"'Remove this unused "out" private field.(Şùıÿÿÿÿ

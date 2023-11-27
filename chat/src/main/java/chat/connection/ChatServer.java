@@ -10,19 +10,18 @@ import chat.DTO.MessageDTO;
 import chat.GUI.Frame;
 
 public class ChatServer {
+    public static final int PORT = 12345;
 	
     private static ServerSocket serverSocket;
     private static Socket clientSocket;
     private static ObjectOutputStream out;
     private static ObjectInputStream in;
 
-    private ChatServer(){}
-
-    public static void start(int port) {
+    private ChatServer(){
         try {
-            serverSocket = new ServerSocket(port);
+            serverSocket = new ServerSocket(PORT);
             System.out.println("Connecting...");
-            
+
             new Thread(() -> {
                 try {
                     clientSocket = serverSocket.accept();
@@ -39,7 +38,7 @@ public class ChatServer {
                     e.printStackTrace();
                 }
             });
-            
+
             Frame.getInstance().updateConnectionStatus(getConnectionStatus());
         } catch (IOException e) {
             System.err.println("Failed to connect to server: " + e.getMessage());
