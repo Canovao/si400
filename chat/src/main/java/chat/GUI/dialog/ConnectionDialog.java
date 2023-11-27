@@ -4,8 +4,7 @@ import javax.swing.*;
 
 import chat.DTO.MessageDTO;
 import chat.GUI.Frame;
-import chat.connection.ChatClient;
-import chat.connection.ChatServer;
+import chat.connection.Chat;
 
 import java.awt.*;
 import java.util.Date;
@@ -42,15 +41,15 @@ public class ConnectionDialog extends JDialog {
             if (username != null && !username.trim().isEmpty()) {
                 MessageDTO userInfo = new MessageDTO(username, "joined!", new Date());
                 Frame.setUserInfo(userInfo);
-                Frame.getInstance().addMessageToConversation(userInfo);
+                Chat.sendMessage(userInfo);
             } else if (username != null) {
                 JOptionPane.showMessageDialog(this.getParent(), "Invalid username!", "Error", JOptionPane.WARNING_MESSAGE);
             } else {
-            	ChatServer.disconnect();
+            	Chat.disconnect();
                 return;
             }
 
-            new Thread(() -> ChatClient.start(ipAddress, ChatServer.PORT)).start();
+            new Thread(() -> Chat.startClient(ipAddress)).start();
 
             ((Frame) getParent()).updateConnectionStatus(true);
             dispose();

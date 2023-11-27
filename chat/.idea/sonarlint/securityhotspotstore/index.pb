@@ -21,3 +21,7 @@ O
 src/main/java/chat/GUI/App.java,d\0\d06b05a708ca2cdde536c097f5a27d577d5d28ce
 Q
 !src/main/java/chat/GUI/Frame.java,3\2\32fdebcbc60cf3b72d020983acd67603c6778e0a
+V
+&src/main/java/chat/DTO/MessageDTO.java,e\e\ee836664a9199b44a3bd1c95687a90146c756525
+W
+'src/main/java/chat/connection/Chat.java,e\1\e1fc6c5c5117f498f9212d3c6a67711076caa92a

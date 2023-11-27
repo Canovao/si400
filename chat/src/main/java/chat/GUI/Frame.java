@@ -2,14 +2,12 @@ package chat.GUI;
 
 import javax.swing.*;
 
-import chat.connection.ChatClient;
-import chat.connection.ChatServer;
+import chat.connection.Chat;
 import chat.DTO.MessageDTO;
 import chat.GUI.dialog.AboutDialog;
 import chat.GUI.dialog.ConnectionDialog;
 import chat.GUI.dialog.HelpDialog;
 import chat.connection.fileTransmission.AudioPlayer;
-import chat.connection.fileTransmission.FileSender;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -17,7 +15,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.File;
-import java.io.IOException;
 import java.io.Serial;
 import java.util.Date;
 
@@ -136,7 +133,7 @@ public class Frame extends JFrame implements ActionListener{
     		(new HelpDialog(Frame.this)).setVisible(true);
     	}
         if(event.getSource() == exitItem) {
-            ChatServer.disconnect();
+            Chat.disconnect();
             System.exit(0);
         }
     }
@@ -210,14 +207,14 @@ public class Frame extends JFrame implements ActionListener{
 
     public void sendMessage() {
     	String message = textField.getText();
-    	ChatClient.sendMessage(message);
+    	Chat.sendMessage(new MessageDTO(getUserInfo().getUsername(), message, new Date()));
         addMessageToConversation(new MessageDTO("Eu", message, new Date()));
         textField.setText("");
     }
     
     public void sendFileMessage(File file) {
     	String message = textField.getText();
-    	ChatClient.sendFileMessage(new MessageDTO(message, message, new Date(), file));
+    	//ChatClient.sendFileMessage(new MessageDTO(message, message, new Date(), file));
     	addFileSentMessageToConversation(new MessageDTO("Eu", message, new Date(), file));
     	textField.setText("");
     }
@@ -311,14 +308,14 @@ public class Frame extends JFrame implements ActionListener{
                 if (option == JFileChooser.APPROVE_OPTION) {
                     File selectedFile = fileChooser.getSelectedFile();
 
-                    try {
+                    /*try {
                         FileSender fileSender = new FileSender(ChatClient.getSocket());
                         fileSender.sendFile(selectedFile.getAbsolutePath());
 
                         sendFileMessage(selectedFile);
                     } catch (IOException ex) {
                         ex.printStackTrace();
-                    }
+                    }*/
                 }
             } else {
                 JOptionPane.showMessageDialog(Frame.this, "You're not connected.", "Connection", JOptionPane.WARNING_MESSAGE);
