@@ -1,10 +1,6 @@
 
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-]
--src/main/java/chat/connection/ChatClient.java,1\a\1a034baa85c6abd0b4c1126db5edd866539334cd
-]
--src/main/java/chat/connection/ChatServer.java,7\6\76a62a84757cd17f5008cb600314ada5f1d013e0
 o
 ?src/main/java/chat/connection/fileTransmission/AudioPlayer.java,e\0\e0de46a0ca63f1fc25ac2da15289a4097ae5bb03
 p

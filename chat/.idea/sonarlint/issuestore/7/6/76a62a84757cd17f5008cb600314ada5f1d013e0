@@ -1,16 +1,0 @@
-
-F
-java:S3010")Remove this assignment of "serverSocket".(ÂÀª8ŠáÖ„Á1
-F
-java:S3010")Remove this assignment of "clientSocket".(ÍÁ¥Å8‹áÖ„Á1
-<
-java:S3010" Remove this assignment of "out".(¹‡­>8‹áÖ„Á1
-<
-java:S3010"Remove this assignment of "in".(ªíö¢8‹áÖ„Á1
-L	java:S106"+Replace this use of System.out by a logger.(ËŸ‚·øÿÿÿÿ8ŒáÖ„Á1
-L	java:S106"+Replace this use of System.out by a logger.(÷â“êùÿÿÿÿ8áÖ„Á1
-G	java:S106,"+Replace this use of System.err by a logger.(Ğå«©8‘áÖ„Á1
-G	java:S1066"+Replace this use of System.out by a logger.(¸½Ş8“áÖ„Á1
-L	java:S1069"+Replace this use of System.err by a logger.(»ÒÎ‡ûÿÿÿÿ8“áÖ„Á1
-I
-java:S1068"'Remove this unused "out" private field.(Şùıÿÿÿÿ8”áÖ„Á1
