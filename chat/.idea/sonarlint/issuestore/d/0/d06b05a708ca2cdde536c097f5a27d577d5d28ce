@@ -1,0 +1,5 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÀÂ¤
+[
+java:S1612">Replace this lambda with method reference 'Chat::startServer'.(ŒäÁ¿8¨éü†Á1
+E	java:S106"+Replace this use of System.err by a logger.(ïù¯¯ûÿÿÿÿ

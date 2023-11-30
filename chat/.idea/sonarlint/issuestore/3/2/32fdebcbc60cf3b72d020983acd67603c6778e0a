@@ -1,0 +1,30 @@
+
+i
+java:S1192¨"KDefine a constant instead of duplicating this literal "Connection" 3 times.(Ôìûí8áŒ†Á1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÀÂ¤8äŒ†Á1
+N
+java:S2387","menuBar" is the name of a field in "Frame".(ëùĞ³ûÿÿÿÿ8Œ†Á1
+B
+java:S1659"&Declare "helpMenu" on a separate line.(‘èËz8‘Œ†Á1
+b
+java:S1659"EDeclare "exitItem" and all following declarations on a separate line.( ¥µ8‘Œ†Á1
+s
+java:S1450"WRemove the "fileMenu" field and declare it as a local variable in the relevant methods.(‘èËz8’Œ†Á1
+s
+java:S1450"WRemove the "helpMenu" field and declare it as a local variable in the relevant methods.(‘èËz8’Œ†Á1
+x
+java:S1450"VRemove the "menuBar" field and declare it as a local variable in the relevant methods.(ëùĞ³ûÿÿÿÿ8’Œ†Á1
+{
+java:S1450"YRemove the "sendButton" field and declare it as a local variable in the relevant methods.(¾ö¨ûÿÿÿÿ8’Œ†Á1
+G
+java:S3010-"%Remove this assignment of "instance".(ñõîÙşÿÿÿÿ8•Œ†Á1
+l
+java:S3252B"OUse static access with "javax.swing.WindowConstants" for "DO_NOTHING_ON_CLOSE".(’¡¿8—Œ†Á1
+f
+java:S6201l"DReplace this instanceof check and cast with 'instanceof JMenu jmenu'(®¸Ÿ¶üÿÿÿÿ8›Œ†Á1
+i
+java:S6201t"LReplace this instanceof check and cast with 'instanceof JMenuItem jmenuitem'(€´Æ8›Œ†Á1
+^	java:S125Ù"<This block of commented-out lines of code should be removed.(ğÚ“£ûÿÿÿÿ8ÄÕŒ†Á1
+T
+java:S1481µ"1Remove this unused "selectedFile" local variable.(ÎÖÑ„úÿÿÿÿ8Ï¨†Á1
+Y	java:S125·"<This block of commented-out lines of code should be removed.(½‘Ñ³8Ï¨†Á1

@@ -1,0 +1,12 @@
+chat\connection\fileTransmission\FileSender.class
+chat\GUI\Frame.class
+chat\GUI\Frame$1.class
+chat\GUI\App.class
+chat\connection\fileTransmission\AudioPlayer.class
+chat\connection\Chat.class
+chat\GUI\dialog\ConnectionDialog.class
+chat\GUI\Constants.class
+chat\GUI\dialog\AboutDialog.class
+chat\connection\fileTransmission\FileReceiver.class
+chat\GUI\dialog\HelpDialog.class
+chat\DTO\MessageDTO.class

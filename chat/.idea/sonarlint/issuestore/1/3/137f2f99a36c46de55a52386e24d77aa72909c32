@@ -1,0 +1,6 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(öóŠıÿÿÿÿ
+x
+java:S1450"VRemove the "ipField" field and declare it as a local variable in the relevant methods.(´£ÒÅÿÿÿÿÿ8ŠÔœ…Á1
+~
+java:S1450"\Remove the "usernameField" field and declare it as a local variable in the relevant methods.(°£´ßúÿÿÿÿ8‹Ôœ…Á1
