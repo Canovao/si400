@@ -1,4 +1,2 @@
 
-k
-java:S1104"PMake file a static final constant or non-public and provide accessors if needed.(ð ½ºÿÿÿÿÿ
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(—¿ÛÙ
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(—¿ÛÙ8 ï¹°Á1

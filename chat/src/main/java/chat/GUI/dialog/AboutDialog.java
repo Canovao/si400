@@ -9,14 +9,27 @@ import chat.GUI.Constants;
 
 import java.awt.*;
 
+/**
+ * The AboutDialog class represents a dialog box displaying information about the developers of the chat application.
+ * It includes the names and images of the developers along with a brief about text.
+ */
 public class AboutDialog extends JDialog {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	public AboutDialog(JFrame parent) {
+    /**
+     * Constructs an AboutDialog.
+     *
+     * @param parent The parent JFrame to which the dialog is attached.
+     */
+    public AboutDialog(JFrame parent) {
         super(parent, "About", true);
         initializeUI();
     }
 
+    /**
+     * Initializes the UI components of the AboutDialog.
+     * Sets up the layout, adds labels with developer names and images, and sets the size and location of the dialog.
+     */
     private void initializeUI() {
         setLayout(new GridLayout(6, 1));
 

@@ -5,42 +5,68 @@ import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class MessageDTO implements Serializable{
-	private static final long serialVersionUID = 1L;
-	public final String username;
-    public final String message;
-    public final String dateTimeOfMessage;
-    public File file;
+/**
+ * The MessageDTO class represents a data transfer object for exchanging messages in a chat application.
+ * It includes information such as the sender's username, message content, date and time of the message,
+ * and optionally a file attachment with its content.
+ */
+public class MessageDTO implements Serializable {
+    private static final long serialVersionUID = 1L;
+    private final String username;
+    private final String message;
+    private final String dateTimeOfMessage;
+    private File file;
+    private byte[] fileContent;
 
-    public MessageDTO(String username, String message, Date dateTimeOfMessage){
+    /**
+     * Constructs a MessageDTO for a text message.
+     *
+     * @param username          The username of the message sender.
+     * @param message           The content of the text message.
+     * @param dateTimeOfMessage The date and time when the message was sent.
+     */
+    public MessageDTO(String username, String message, Date dateTimeOfMessage) {
         this.username = username;
         this.message = message;
-        SimpleDateFormat ft = new SimpleDateFormat ("E hh:mm a");
+        SimpleDateFormat ft = new SimpleDateFormat("E hh:mm a");
         this.dateTimeOfMessage = ft.format(dateTimeOfMessage);
         this.file = null;
     }
-    
-    public MessageDTO(String username, String message, Date dateTimeOfMessage, File file){
+
+    /**
+     * Constructs a MessageDTO for a message with a file attachment.
+     *
+     * @param username          The username of the message sender.
+     * @param dateTimeOfMessage The date and time when the message was sent.
+     * @param file              The attached file.
+     * @param fileContent       The content of the attached file.
+     */
+    public MessageDTO(String username, Date dateTimeOfMessage, File file, byte[] fileContent) {
         this.username = username;
-        this.message = message;
-        SimpleDateFormat ft = new SimpleDateFormat ("E hh:mm a");
+        this.fileContent = fileContent;
+        this.message = "";
+        SimpleDateFormat ft = new SimpleDateFormat("E hh:mm a");
         this.dateTimeOfMessage = ft.format(dateTimeOfMessage);
         this.file = file;
     }
 
-    public String getUsername(){
+    public String getUsername() {
         return this.username;
     }
 
-    public String getMessage(){
+    public String getMessage() {
         return this.message;
     }
 
-    public String getDateTimeOfMessage(){
+    public String getDateTimeOfMessage() {
         return this.dateTimeOfMessage;
     }
-    
+
     public File getMessageFile() {
-    	return this.file;
+        return this.file;
+    }
+
+    public byte[] getFileContent() {
+        return fileContent;
     }
 }

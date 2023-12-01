@@ -1,12 +1,6 @@
 
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-o
-?src/main/java/chat/connection/fileTransmission/AudioPlayer.java,e\0\e0de46a0ca63f1fc25ac2da15289a4097ae5bb03
-p
-@src/main/java/chat/connection/fileTransmission/FileReceiver.java,7\4\74fb0768f02a815acf79a6e6b83b373d74fbed6c
-n
->src/main/java/chat/connection/fileTransmission/FileSender.java,e\5\e5f943363fe3463c0af69d2f9bce68e46fd03df0
 ^
 .src/main/java/chat/GUI/dialog/AboutDialog.java,1\5\15a3ead25fa9b332ddb59a25714fff367e829e2f
 c
@@ -19,5 +13,7 @@ Q
 !src/main/java/chat/GUI/Frame.java,3\2\32fdebcbc60cf3b72d020983acd67603c6778e0a
 V
 &src/main/java/chat/DTO/MessageDTO.java,e\e\ee836664a9199b44a3bd1c95687a90146c756525
-W
-'src/main/java/chat/connection/Chat.java,e\1\e1fc6c5c5117f498f9212d3c6a67711076caa92a
+]
+-src/main/java/chat/connection/Connection.java,4\5\45bdf7ece6cf64837151451b22143df1dda73591
+U
+%src/main/java/chat/GUI/Constants.java,b\7\b7e4bff00fc4696b4a5e4c60e4454728208b7cfb

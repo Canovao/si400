@@ -1,0 +1,21 @@
+
+W
+java:S1141|"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8›ìÊ±Á1
+l
+java:S2095Q"JUse try-with-resources or close this "ServerSocket" in a "finally" clause.(èŠÌÃıÿÿÿÿ8ÔîÊ±Á1
+D
+java:S2189y""Add an end condition to this loop.(˜ïˆÿÿÿÿÿ8ÕîÊ±Á1
+V
+java:S1118":Add a private constructor to hide the implicit public one.(óõØs8ØîÊ±Á1
+L
+java:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8İîÊ±Á1
+L	java:S106+"+Replace this use of System.err by a logger.(ïù¯¯ûÿÿÿÿ8ŞîÊ±Á1
+G	java:S106C"+Replace this use of System.err by a logger.(ˆ¼¶Œ8âîÊ±Á1
+L	java:S106F"+Replace this use of System.err by a logger.(Ê˜îúıÿÿÿÿ8ãîÊ±Á1
+L
+java:S2093P"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8çîÊ±Á1
+p
+java:S6201"NReplace this instanceof check and cast with 'instanceof MessageDTO messageDTO'(¬éîÕÿÿÿÿÿ8îîÊ±Á1
+M	java:S106‰"+Replace this use of System.err by a logger.(á„êùÿÿÿÿ8ğîÊ±Á1
+M	java:S106Œ"+Replace this use of System.err by a logger.(²»Ó ùÿÿÿÿ8ğîÊ±Á1
+M	java:S106°"+Replace this use of System.err by a logger.(ïù¯¯ûÿÿÿÿ8õîÊ±Á1
